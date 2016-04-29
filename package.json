@@ -1,0 +1,24 @@
+{
+  "name": "node-connect",
+  "version": "1.0.0",
+  "description": "simulate connect ",
+  "main": "index.js",
+  "dependencies": {
+    "connect": "^3.4.1",
+    "finalhandler": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YComputer/node-connect.git"
+  },
+  "author": "xiaobing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YComputer/node-connect/issues"
+  },
+  "homepage": "https://github.com/YComputer/node-connect#readme"
+}
