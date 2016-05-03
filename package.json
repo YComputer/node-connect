@@ -4,8 +4,14 @@
   "description": "simulate connect ",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "connect": "^3.4.1",
-    "finalhandler": "^0.4.1"
+    "connect-query": "^0.2.0",
+    "cookie-parser": "^1.4.1",
+    "finalhandler": "^0.4.1",
+    "method-override": "^2.3.5",
+    "morgan": "^1.7.0",
+    "qs": "^6.1.0"
   },
   "devDependencies": {},
   "scripts": {

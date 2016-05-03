@@ -1,4 +1,8 @@
 var connect = require('connect')
+var cookieParser = require('cookie-parser')
+var qs = require('qs')
+var query = require('connect-query');
+var favicon = require('serve-favicon');
 var app = connect()
 
 function logger(req, res, next) {
@@ -7,8 +11,11 @@ function logger(req, res, next) {
 }
 
 function hello(req, res) {
-    res.setHeader('Content-Type', 'text/plain')
-    res.end('hello word')
+    // res.setHeader('Content-Type', 'text/plain')
+    // res.end('hello word')
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify(req.query))
+
 }
 
 function authenticateWithDatabase(user, pass, cb){
@@ -43,8 +50,11 @@ function admin(req, res, next){
 }
 
 
-app.use(logger)
-app.use('/admin', restrict)
-app.use('/admin', admin)
+// app.use(logger)
+// app.use('/admin', restrict)
+// app.use('/admin', admin)
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(cookieParser())
+app.use(query())
 app.use(hello)
 app.listen(3000)
